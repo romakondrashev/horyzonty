@@ -1,0 +1,66 @@
+.page-content.gray{
+	p, a, span, h1, h2, h3, h4, h5, h6 {color: #fff;font-weight: 100;}
+	
+	.page-content-inner{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	    max-width: 77%;
+	}
+	
+	background: right / contain  no-repeat  url("../img/logo-bg.png");
+
+	.content__top {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		p,a {
+			font-family: 'Roboto';
+			color: #fff;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-weight: 300;
+    		font-size: 14px;
+		}
+		.phone-number {
+			margin-left: 30px;
+		}
+	}
+
+	.content__center {
+		padding-bottom: 100px;
+		.site-title{
+			p {
+				font-size: 90px;
+			    background: url(../img/site-title-bg.png) no-repeat;
+			    background-position: -46px 10px;
+			    -webkit-background-clip: text;
+			    text-transform: uppercase;
+			    -webkit-text-fill-color: transparent;
+			    font-weight: 900;
+			    margin: 20px 0;
+			}
+		}
+		p {
+			font-size: 18px;
+			margin-top: 10px;
+		}
+	}
+
+	.content__bottom {
+		.stats {
+			max-width: 791px;
+			justify-content: space-between;
+			.stat_item {
+				span {
+					font-size: 60px;
+				}
+				p {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,238 @@
+.common-page {
+
+	.page-content.light {
+		h1, h2, h3, h4, h5, h6 { color: $accentHeader; font-weight: 900;}
+		ul li {font-family: Museo Sans Cyrl;}
+		h1{font-size: 36px;}
+		h2, h3{font-size: 28px; @include _768 {font-size: 18px;}}
+		section {
+			p, a {font-weight: 400;line-height: 26px;font-size: 15px;@include _768 {font-size: 14px;}}
+		}
+
+	    background: right top/contain no-repeat url('../img/logo-bg-light.png');
+		background-size: 240px;
+
+		padding-left: 480px;
+		padding-right: 20px;
+
+		&.clear-bg {
+			background: none!important;
+		}
+
+		// Color filled
+		.color-filled {
+			background-color: $accentHeader;
+			padding: 30px;
+			@include _768 {
+				padding: 15px;
+			}
+			        
+
+			p, a {
+				display: block;
+				color: #fff;
+				font-weight: 300;
+				margin-bottom: 10px;
+			}
+
+			p.title {
+				font-size: 28px;
+				@include _768 {
+					font-size: 18px;
+					br{display: none;}
+				}
+    			line-height: 38px;
+			}
+		}
+
+
+		// Download section
+		.download-block {
+			background: top right / 24% no-repeat url('../img/logo-bg-transparent.png');
+			box-shadow: 0px 10px 30px rgba(0, 63, 130, 0.1);
+			padding: 40px;
+
+			@include _768 {
+				background: none;
+				box-shadow: none;
+				padding: 0px;
+				
+			}
+			
+
+			p.title {
+				font-weight: 300 ;
+				font-size: 25px ;
+				color: $accentHeader ;
+
+				@include _768{
+					font-size: 21px;
+				}
+			}
+
+		}
+	}
+
+	.page-content-inner {
+		max-width: 946px;
+	}
+
+	.mob-address,.phone-number {
+		display: block !important;
+	}
+	.short_info__bottom {
+		display: none;
+	}
+	.mob-address {
+    	margin-bottom: 10px;
+    }
+
+
+    // Slider
+	.our-history {
+		margin-top: 70px;
+
+		p.title {font-size: 36px;font-weight: 900;color: $accentHeader;margin-bottom: 70px;}
+		
+		.swiper-slide {
+			span {
+				font-weight: 300;
+				font-size: 30px;
+			}
+			p {
+				margin-top: 10px;
+			}
+		}
+		.slider-buttons {
+			display: flex;
+			margin-top: 70px;
+			.swiper-button-prev {margin-right: 30px;}
+			.swiper-button-prev, .swiper-button-next{
+				position: initial;
+				height: 46px;
+			    width: 46px;
+			    border-radius: 50px;
+			    border: 2px solid #E6E6E6;
+			    outline: none;
+			}
+			.swiper-button-prev:after, .swiper-button-next:after{
+			    color: #1A1A1A;
+				font-size: 15px;
+    			font-weight: 700;
+			}
+			
+		}
+	}
+
+
+	// Grid rows
+
+	a.nav_link {
+		text-transform: inherit;
+		position: relative;
+	    font-weight: 300;
+
+		&.link_next {padding-right: 16px;}
+		&.link_prev {padding-left: 16px;margin-left: 12px;}
+	    &:after,
+	    &:before {
+	    	position: absolute;
+	    	top: 4px;
+	    	width: 13px;
+		    height: 13px;
+		    content: '';
+		    background-size: cover;
+	    }
+		&.link_next:after{
+		    right: -7px;
+		    background-image: url(../img/arrow-right.svg);
+		}
+		&.link_prev:before{
+		    left: -7px;
+		    background-image: url(../img/arrow-left.svg);
+		}
+	}
+	.grid-blocks {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include _(600) {
+			grid-template-columns: 1fr;
+		}
+		        
+		grid-gap: 30px;
+
+		.grid-item {
+			box-shadow: 0px 10px 30px rgba(0, 63, 130, 0.1);
+			padding: 20px 30px;
+
+			span {
+				display: inline-block;
+			}
+
+			.grid-item__link {
+				text-align: right;
+			}
+		}
+	}
+
+
+	// Info list
+
+	ul.info-list {
+		li {
+		    font-size: 15px;
+		    font-weight: 400;
+		    line-height: 25px;
+		    margin-bottom: 13px;
+
+		    @include _768 {
+		    	font-size: 14px;
+		    }
+		            
+		}
+	}
+
+	// Marked list
+	ul.marked-list {
+		li {
+		    margin-bottom: 20px;
+		    padding-left: 40px;
+		    line-height: 25px;
+			text-transform: uppercase;
+			position: relative;
+			a {
+				color: #1A1A1A;
+			}
+
+			@include _768 {
+				font-size: 14px;
+			}
+
+			        
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 20px;
+				width: 20px;
+				background: no-repeat url('../img/checked.svg');
+			}
+		}
+		&.download-list  {
+			max-width: 470px;
+			li:before{
+				height: 30px;
+				width: 30px;
+				background: no-repeat url('../img/download.svg');
+			}
+		}
+	}
+
+
+
+
+
+	        
+}

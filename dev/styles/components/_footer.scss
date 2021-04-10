@@ -1,0 +1,22 @@
+footer{
+	background: #1A1A1A;
+	padding: 10px;
+
+	.footer{
+		justify-content: space-between;
+	}
+
+
+	p,a {
+		color: #fff;
+		font-family: Museo Sans Cyrl;
+		font-weight: 300;
+		font-size: 14px;
+		text-transform: initial;
+	}
+
+	// Под вопросом ещё!
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
