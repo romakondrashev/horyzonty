@@ -8,11 +8,11 @@ const config = require('../config');
 gulp.task('scripts', () =>
   gulp
     .src(config.dev.js.src)
-    .pipe(
+    /*.pipe(
       rename({
         suffix: '.min'
       })
-    )
+    )*/
     .pipe(gulp.dest(config.dev.js.dest))
     .pipe(browserSync.stream())
 );
@@ -20,16 +20,16 @@ gulp.task('scripts', () =>
 gulp.task('scripts:build', () =>
   gulp
     .src(config.dist.js.src)
-    .pipe(
+    /*.pipe(
       rename({
         suffix: '.min'
       })
-    )
-    .pipe(
+    )*/
+    /*.pipe(
       babel({
         presets: ['@babel/env']
       })
-    )
-    .pipe(uglify())
+    )*/
+    // .pipe(uglify())
     .pipe(gulp.dest(config.dist.js.dest))
 );

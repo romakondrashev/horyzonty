@@ -13,6 +13,11 @@ footer{
 		font-weight: 300;
 		font-size: 14px;
 		text-transform: initial;
+
+		@include _420 {
+			font-size: 12px;
+		}
+		        
 	}
 
 	// Под вопросом ещё!

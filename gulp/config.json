@@ -29,7 +29,8 @@
     "img": { "src": "./dev/assets/img/**/*", "dest": "./dist/assets/img" },
     "html": { "src": "./dev/*.html", "dest": "./dist" },
     "css": { "src": "./dev/assets/css/*.css", "dest": "./dist/assets/css" },
-    "js": { "src": "./dev/scripts/scripts.js", "dest": "./dist/assets/js" },
+    "lib-css": { "src": "./dev/assets/css/lib/*.css", "dest": "./dist/assets/css/lib" },
+    "js": { "src": "./dev/scripts/*", "dest": "./dist/assets/js" },
     "fonts": {
       "src": "./dev/assets/fonts/**/*.*",
       "dest": "./dist/assets/fonts"
