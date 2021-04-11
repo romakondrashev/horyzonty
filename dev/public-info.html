@@ -18,6 +18,8 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.min.css"/>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="assets/css/aos.min.css"/>
   </head>
 </html>
 <body class="light-page">
@@ -30,7 +32,7 @@
     </div>
   </header>
   <div class="d-flex common-page">
-    <header class="desktop">
+    <header class="desktop" data-aos="fade-right">
       <div class="logo"><a href="/"><img src="./assets/img/Logo.svg"/></a></div>
       <div class="header__menu">
         <nav>
@@ -45,14 +47,13 @@
             <li> <a href="#">Контакти</a></li>
           </ul>
         </nav>
-        <div class="our_video">
-          <div class="play"><span></span></div>
+        <div class="our_video"><a class="play" href="https://www.youtube.com/watch?v=iIMmS-5W3v4" data-fancybox="data-fancybox"><span></span></a>
           <p>відео з виробництва</p>
         </div>
       </div>
       <div class="header__short-info">
-        <p class="mob-address show-1024"><span class="accent">м. Львів, <br/>вул. Гайдамацька 9а</span></p><a class="phone-number mob-phone accent show-1024" href="tel:0322610537">(032) 261-05-37</a>
-        <p class="short_info__bottom"> <span class="accent">ТОВ "Горизонти" </span><br class="hide-1024"/>входить у <br class="show-1024"/>групу <br class="hide-1024"/>компаній <span class="accent">mnd.com.ua</span></p>
+        <p class="mob-address show-1024"><a href="#"><span class="accent">м. Львів, <br/>вул. Гайдамацька 9а</span></a></p><a class="phone-number mob-phone accent show-1024" href="tel:0322610537">(032) 261-05-37</a>
+        <p class="short_info__bottom"> <span class="accent">ТОВ "Горизонти" </span><br class="hide-1024"/>входить у <br class="show-1024"/>групу <br class="hide-1024"/>компаній <a class="underline-hover" href="http://www.mnd.com.ua/" target="_blank"><span class="accent">mnd.com.ua</span></a></p>
       </div>
     </header>
     <div class="page-content light clear-bg">
@@ -98,5 +99,7 @@
     </div>
   </footer>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwi21OeG7qQWHua1QN_-Q8DWYkNcTJN34&amp;amp;libraries=geometry"></script>
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+  <script src="assets/js/aos.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>

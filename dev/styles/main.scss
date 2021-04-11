@@ -19,6 +19,15 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #fff;
+	transition: .2s ease all;
+
+	&:hover {
+		color: $accent !important;
+	}
+	&.underline-hover:hover {
+		transition: none;
+		text-decoration: underline;
+	}
 }
 p {
 	margin: 0;
@@ -72,7 +81,6 @@ p {
 	position: relative;
 	width: 48px;
 	height: 48px;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -92,6 +100,14 @@ p {
 		border-width: 8px 0 8px 11px;
 	}
 
+
+	&:hover {
+		background-color: $accent;
+	}
+	&:hover span {
+		border-color: transparent transparent transparent #fff;
+	}
+
 }
 header.mobile, .page-content.gray .content__bottom .our_video{
 	display: none;
@@ -106,8 +122,9 @@ ul.breadcrumbs {
 	margin-bottom: 30px;
 	padding-right: 90px;
 	li {
-		a {font-weight: 400;}
-		a:after {font-weight: 300; content: ' . ';padding: 0 20px;text-align: center;}
+		a {font-weight: 400;padding-right: 40px;position: relative;}
+		a:hover{color: #bbb !important;text-decoration: underline;}
+		a:after {font-weight: 300; content: ' . ';padding: 0 20px;text-align: center;position: absolute;}
 		span {font-weight: 300;}
 		a, span {
 			font-size: 14px;
@@ -391,5 +408,7 @@ ul.breadcrumbs {
 		padding-left: 20px;
 	}
 }
+
+
 
 

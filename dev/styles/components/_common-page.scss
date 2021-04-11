@@ -39,6 +39,11 @@
 				}
 			}
 
+			a:hover{
+				color: #fff !important;
+				text-decoration: underline;
+			}
+
 			p.title {
 				font-size: 28px;
 				@include _768 {
@@ -186,25 +191,71 @@
 					height: 46px;
 				    width: 46px;
 				    border-radius: 50px;
-				    border: 2px solid #E6E6E6;
+				    border: 2px solid #353535;
+				    background-color: #353535;
 				    outline: none;
+				    transition: .1s ease all;
+
+				    &:hover {
+				    	background-color: $accent;
+				    	border-color: $accent;
+				    }
 				}
 				.swiper-button-prev:after, .swiper-button-next:after{
-				    color: $textColor;
+					color: #fff;
 					font-size: 15px;
 	    			font-weight: 700;
+				}
+
+				.swiper-button-disabled {
+					opacity: 1;
+					border: 2px solid #E6E6E6;
+					background-color: #fff;
+				    pointer-events: all;
+					&:after {color: $textColor;}
+					&:hover{background-color: #E5E5E5;border: 2px solid #E6E6E6;}
 				}
 				
 			}
 		}
 
 
-		// Grid rows
+		// Navigation links
+
+		.slide-down-on-move .move-part{top:0;position:relative;transition:.5s;opacity:1;display:flex;justify-content:center;flex-direction:column;}
+		a.nav_link{display:flex;}
+		a.nav_link:hover .default-arrow span{background-color:$accentHeader;}
+		a.nav_link:hover .btn-text{color:$accentHeader;text-decoration:underline;}
+		a.nav_link .default-arrow{transform:scale(.5) rotateZ(90deg) translateX(10%);}
+		a.nav_link .default-arrow.to-left{transform:scale(.5) rotateZ(270deg) translateX(10%);margin-left: 0;}
+		a.nav_link .default-arrow span{background-color:$accentHeader;}
+		.default-arrow{position:relative;width:1.875vw;display:block;transform-origin:center;}
+		.default-arrow span{position:absolute;width:.78125vw;height:1px;background-color:$accentHeader;display:block;transition:.5s;}
+		.default-arrow span:nth-child(1){transform-origin:left top;left:50%;bottom:calc(50% + .26042vw);transform:rotate(33deg);}
+		.default-arrow span:nth-child(2){transform-origin:right top;right:50%;bottom:calc(50% + .26042vw);transform:rotate(-33deg);}
+		.default-arrow span:nth-child(3){transform-origin:right;right:50%;bottom:calc(50% + .26042vw);transform:rotate(-90deg);width:0;}
+		.default-arrow.revers span:nth-child(1){bottom:calc(50% + .78125vw);transform:rotate(45deg);}
+		.default-arrow.revers span:nth-child(2){bottom:calc(50% + .78125vw);transform:rotate(-45deg);}
+		.default-arrow.revers span:nth-child(3){transform-origin:right;right:50%;bottom:calc(50% + .78125vw);transform:rotate(-90deg);width:1.875vw;}
+
+
+		.default-arrow.to-right{transform:rotate(90deg);}
+		.btn-with-arrow{cursor:pointer;color:$accentHeader;background-color:transparent;border:none;}
+		.btn-with-arrow.to-right{justify-content: flex-end;}
+		.btn-with-arrow .default-arrow{margin-left:.52083vw;}
+		.btn-with-arrow .btn-text{display:block;margin-top:auto;margin-bottom:auto;display:block;transition:.5s;}
+		.btn-with-arrow:hover .btn-text{color:$accentHeader;}
+		.btn-with-arrow:hover .default-arrow.revers span{position:absolute;width:.78125vw;height:1px;background-color:$accentHeader;display:block;transition:.5s;}
+		.btn-with-arrow:hover .default-arrow.revers span:nth-child(1){transform-origin:left top;left:50%;bottom:calc(50% + .26042vw);transform:rotate(33deg);}
+		.btn-with-arrow:hover .default-arrow.revers span:nth-child(2){transform-origin:right top;right:50%;bottom:calc(50% + .26042vw);transform:rotate(-33deg);}
+		.btn-with-arrow:hover .default-arrow.revers span:nth-child(3){transform-origin:right;right:50%;bottom:calc(50% + .26042vw);transform:rotate(-90deg);width:0;}
+
 
 		a.nav_link {
 			text-transform: inherit;
 			position: relative;
 		    font-weight: 300;
+		    &:hover {color: $accentHeader !important;}
 
 			&.link_next {padding-right: 16px;}
 			&.link_prev {padding-left: 16px;margin-left: 12px;}
@@ -226,6 +277,8 @@
 			    background-image: url(../img/arrow-left.svg);
 			}
 		}
+
+		// Grid blocks
 		.grid-blocks {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -244,6 +297,7 @@
 				}
 
 				.grid-item__link {
+					margin-right: -12px;
 					text-align: right;
 				}
 			}
@@ -275,7 +329,10 @@
 				text-transform: uppercase;
 				position: relative;
 				a {
+					display: block;
 					color: $textColor;
+
+					&:hover {text-decoration: underline;}
 				}
 
 				@include _768 {

@@ -188,6 +188,7 @@ $.Map.init_global_map = function () {
 }
 
 jQuery(function() {
+	AOS.init();
 	$('#menu__toggle').on('change',function(){
 		if(this.checked) {
 	        $('header.desktop').css("display", "flex").hide().fadeIn();

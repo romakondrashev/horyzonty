@@ -1,4 +1,4 @@
-header.desktop
+header.desktop(data-aos="fade-right")
 	.logo
 		a(href="/")
 			img(src="./assets/img/Logo.svg")
@@ -22,15 +22,16 @@ header.desktop
 				li 
 					a(href="#") Контакти
 		.our_video
-			.play
+			a(href="https://www.youtube.com/watch?v=iIMmS-5W3v4" data-fancybox).play
 				span
 			p відео з виробництва
 	.header__short-info
 		p.mob-address.show-1024
-			span.accent
-				|м. Львів, 
-				br
-				|вул. Гайдамацька 9а
+			a(href="#")
+				span.accent
+					|м. Львів, 
+					br
+					|вул. Гайдамацька 9а
 		a(href="tel:0322610537" class="phone-number mob-phone accent show-1024") (032) 261-05-37
 		p.short_info__bottom 
 			span.accent ТОВ "Горизонти" 
@@ -40,4 +41,5 @@ header.desktop
 			|групу 
 			br.hide-1024
 			|компаній 
-			span.accent mnd.com.ua
+			a(href="http://www.mnd.com.ua/" target="_blank" class="underline-hover")
+				span.accent mnd.com.ua

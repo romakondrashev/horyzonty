@@ -11,6 +11,10 @@ header.desktop{
 	justify-content: space-between;
 	padding: 30px 30px 60px 96px;
 
+	.logo a:hover {
+		opacity: .7
+	}
+
 	nav ul li,p,a,span {
 		font-family: 'Roboto';
 		color: #fff;
